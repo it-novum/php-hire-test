@@ -57,6 +57,7 @@
 <script>
     $(function () {
         var max_fields = 15; //maximum input boxes allowed
+        var wrapper_edit = $(".input_fields_wrap_edit"); //Fields wrapper
         var wrapper = $(".input_fields_wrap"); //Fields wrapper
         var x = 1; //initial text box count
         $('.zutat').on('click', function (e) { //on add input button click
