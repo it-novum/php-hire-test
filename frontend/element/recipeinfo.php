@@ -27,6 +27,10 @@ echo <<<HTML
             <th>{$t->translate('SKILL')}</th>
             <td>$spoons</td>
         </tr>
+        <tr>
+            <th>{$t->translate('CREATED')}</th>
+            <td>{$data->created->format($t->translate('DATE_TIME_FORMAT'))}</td>
+        </tr>
     </tbody>
 </table>
 HTML;
