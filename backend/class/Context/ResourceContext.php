@@ -6,7 +6,7 @@ use noxkiwi\core\Context\ResourceContext as BaseResourceContext;
 /**
  * I am the Resource Context
  *
- * @package      noxkiwi\nlfwadmin\Context
+ * @package      noxkiwi\cookbook\Context
  * @author       Jan Nox <jan@nox.kiwi>
  * @license      https://nox.kiwi/license
  * @copyright    2018 noxkiwi

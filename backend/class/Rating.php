@@ -4,9 +4,9 @@ namespace noxkiwi\cookbook;
 use DateTime;
 
 /**
- * I am the storage for translations.
+ * I am a Rating for a Recipe.
  *
- * @package      noxkiwi\dataabstraction\Model
+ * @package      noxkiwi\cookbook
  * @author       Jan Nox <jan@nox.kiwi>
  * @license      https://nox.kiwi/license
  * @copyright    2022 noxkiwi

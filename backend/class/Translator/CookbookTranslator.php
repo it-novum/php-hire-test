@@ -10,12 +10,12 @@ use noxkiwi\translator\Translator;
 use const E_USER_NOTICE;
 
 /**
- * I am the Translator that uses JSON files.
+ * I am the Translator that uses a simple SQL table to store translations.
  *
- * @package      noxkiwi\translator\Translator
+ * @package      noxkiwi\cookbook\Translator
  * @author       Jan Nox <jan@nox.kiwi>
  * @license      https://nox.kiwi/license
- * @copyright    2021 noxkiwi
+ * @copyright    2022 noxkiwi
  * @version      1.0.0
  * @link         https://nox.kiwi/
  */
@@ -41,7 +41,7 @@ MYSQL;
         }
         $ret = [];
         foreach ($results as $result) {
-            $ret[] = $result['Name'];
+            $ret[] = $result['translation_key'];
         }
 
         return $ret;

@@ -6,14 +6,10 @@ use noxkiwi\crud\Context\CrudfrontendContext as BaseCrudFrontendContext;
 /**
  * I am the frontend Context for the CRUD manager.
  *
- * @package      noxkiwi\nlfwadmin\Context
- * @uses         \noxkiwi\nlfwadmin\Model\WorkflowModel
- * @uses         \noxkiwi\nlfwadmin\Model\ListModel
- * @uses         \noxkiwi\nlfwadmin\Model\ActionModel
- * @uses         \noxkiwi\nlfwadmin\Model\FieldModel
+ * @package      noxkiwi\cookbook\Context
  * @author       Jan Nox <jan@nox.kiwi>
  * @license      https://nox.kiwi/license
- * @copyright    2021 noxkiwi
+ * @copyright    2022 noxkiwi
  * @version      1.0.0
  * @link         https://nox.kiwi/
  *

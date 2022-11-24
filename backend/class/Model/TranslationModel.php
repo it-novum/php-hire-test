@@ -6,7 +6,7 @@ use noxkiwi\dataabstraction\Model;
 /**
  * I am the storage for translations.
  *
- * @package      noxkiwi\dataabstraction\Model
+ * @package      noxkiwi\cookbook\Model
  * @author       Jan Nox <jan@nox.kiwi>
  * @license      https://nox.kiwi/license
  * @copyright    2022 noxkiwi

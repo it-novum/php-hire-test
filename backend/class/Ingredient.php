@@ -5,9 +5,9 @@ use noxkiwi\translator\Traits\TranslatorTrait;
 use Stringable;
 
 /**
- * I am the storage for translations.
+ * I am an Ingredient for a Recipe.
  *
- * @package      noxkiwi\dataabstraction\Model
+ * @package      noxkiwi\cookbook
  * @author       Jan Nox <jan@nox.kiwi>
  * @license      https://nox.kiwi/license
  * @copyright    2022 noxkiwi

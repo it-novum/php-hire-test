@@ -2,9 +2,9 @@
 namespace noxkiwi\cookbook;
 
 /**
- * I am the storage for translations.
+ * I am the Recipe Object.
  *
- * @package      noxkiwi\dataabstraction\Model
+ * @package      noxkiwi\cookbook
  * @author       Jan Nox <jan@nox.kiwi>
  * @license      https://nox.kiwi/license
  * @copyright    2022 noxkiwi
