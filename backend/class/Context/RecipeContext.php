@@ -45,18 +45,6 @@ final class RecipeContext extends Context
     {
         parent::__construct();
         $this->recipeModel = RecipeModel::getInstance();
-    }
-
-    /**
-     * I will solely list all recipes on a simple page.
-     *
-     * @return void
-     *
-     * @throws \noxkiwi\dataabstraction\Exception\EntryMissingException
-     * @throws \noxkiwi\singleton\Exception\SingletonException
-     */
-    protected function viewList(): void
-    {
         switch ($this->request->get(self::ORDER)) {
             case 'LATEST':
                 $this->recipeModel->addOrder('recipe_created', 'DESC');
@@ -71,6 +59,18 @@ final class RecipeContext extends Context
             default:
                 $this->recipeModel->addOrder('translation_key', 'ASC');
         }
+    }
+
+    /**
+     * I will solely list all recipes on a simple page.
+     *
+     * @return void
+     *
+     * @throws \noxkiwi\dataabstraction\Exception\EntryMissingException
+     * @throws \noxkiwi\singleton\Exception\SingletonException
+     */
+    protected function viewList(): void
+    {
         $rows    = $this->recipeModel->search();
         $recipes = [];
         foreach ($rows as $row) {
