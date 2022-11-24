@@ -22,9 +22,9 @@ Recipes should be able to be sent as e-mail to a given e-mail address.
 2. Create new recipes with ingredients
 3. Send recipes via E-Mail to a friend (optional)
 4. Sort the list of recipes
-4. Search recipes
-5. Load a recipe preview via AJAX on hover the title.
-6. Make it user friendly
+5. Search recipes
+6. Load a recipe preview via AJAX on hover the title.
+7. Make it user friendly
 
 ### Example recipe:
 *Created: 20.01.2020*
@@ -48,10 +48,10 @@ Bake it at 200°C for 40 minutes.
 This is an example recipe for our hiring test - Om Nom Nom
 
 
-*This is just a example we never tasted, so maybe don't bake it :)*
+*This is just an example we never tasted, so maybe don't bake it :)*
 
 # Requirements
-This are must have requirements, your application needs to fulfill:
+These are must have requirements, your application needs to fulfill:
 * PHP >= 7.2
 * MySQL >= 5.7
 * Bootstrap 4.x
@@ -65,7 +65,7 @@ This are must have requirements, your application needs to fulfill:
 * Our development environment is based on Ubuntu virtual machines (20.04 LTS). It would be great if you have some experiences using Ubuntu
 * openITCOCKPIT gets developed using GitHub and Jenkins
 
-# Nice to have (but not a must have)
+# Nice to have (but not a must-have)
 * Nagios, Naemon, Icinga or Prometheus experiences
 * Knowledge of [CakePHP](http://cakephp.org/)
 * Nginx and PHP-FPM experiences

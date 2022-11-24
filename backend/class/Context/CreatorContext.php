@@ -3,7 +3,6 @@ namespace noxkiwi\cookbook\Context;
 
 use noxkiwi\cookbook\Model\IngredientModel;
 use noxkiwi\cookbook\Model\RecipeIngredientModel;
-use noxkiwi\cookbook\Model\TranslationModel;
 use noxkiwi\core\Constants\Mvc;
 use noxkiwi\core\Context;
 use noxkiwi\cookbook\Model\RecipeModel;
@@ -11,7 +10,6 @@ use noxkiwi\core\Helper\JsonHelper;
 use noxkiwi\core\Helper\LinkHelper;
 use noxkiwi\database\Database;
 use noxkiwi\database\Query;
-use noxkiwi\mailer\Mail;
 use noxkiwi\mailer\Mailer;
 use noxkiwi\translator\Translator;
 
@@ -109,10 +107,10 @@ MYSQL;
 REPLACE INTO translation (`translation_name`, `translation_german`, `translation_english`) VALUES ('$recipe->description_key', '$description', '$description');
 MYSQL;
 
-        // Just to clarify that again, I'd really prefer to NEVER use direct access on the ORM but... You gotta do what you gotta do.
-        $db                             = Database::getInstance();
-        $db->write($titleTranslation);
-        $db->write($descriptionTranslation);
+        // Just to clarify that again, I'd really prefer to NEVER use direct access on the ORM but...
+        $database = Database::getInstance();
+        $database->write($titleTranslation);
+        $database->write($descriptionTranslation);
         // BUILD RECIPE<->INGREDIENTS
         foreach ((array)$this->request->get('ingredients', []) as $ingredient) {
             $ingredientEntry                            = $this->ingredientModel->loadEntry($ingredient['ingredient_id']);
