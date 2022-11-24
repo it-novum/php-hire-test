@@ -25,6 +25,7 @@ final class RecipeContext extends Context
     private const SEARCH     = 'q';
     private const RECIPE_ID  = 'recipe_id';
     private const MULTIPLIER = 'm';
+    private const ORDER      = 'o';
     private RecipeModel $recipeModel;
 
     /**
