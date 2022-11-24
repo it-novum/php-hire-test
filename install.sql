@@ -219,7 +219,6 @@ insert  into `translation`(`translation_name`,`translation_german`,`translation_
 ('INGREDIENT_TYPE_SPICE','Gewürz','spice'),
 ('INGREDIENT_TYPE_VEGETABLE','Gemüse','vegetable'),
 ('INGREDIENT_WINE_RED','Rotwein','red wine'),
-('NAME','NAME2','NAME1'),
 ('PHOTO','Foto','Photo'),
 ('PORTIONS','Portionen','Portions'),
 ('PREPARATION','Zubereitung','Preparation'),
@@ -249,7 +248,11 @@ insert  into `translation`(`translation_name`,`translation_german`,`translation_
 ('UNIT_COUNT','Stück','pieces'),
 ('UNIT_GRAM','Gramm','gram'),
 ('UNIT_MILLILITER','ml','ml'),
-('VIEWS','Besucher','Views');
+('VIEWS','Besucher','Views',
+('LATEST', 'Neueste', 'Latest'),
+('FASTEST', 'Schnellste', 'Fastest'),
+('EASIEST', 'Einfachste', 'Easiest'),
+('NAME', 'Name', 'Name');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
