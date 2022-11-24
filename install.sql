@@ -186,7 +186,8 @@ CREATE TABLE `translation` (
 
 /*Data for the table `translation` */
 
-insert  into `translation`(`translation_name`,`translation_german`,`translation_english`) values 
+DELETE FROM translation;
+insert  into `translation`(`translation_name`,`translation_german`,`translation_english`) values
 ('ADD_INGREDIENT','Zutat hinzufügen','Add ingredient'),
 ('AMOUNT','Menge','Amount'),
 ('CREATE_RECIPE','Rezept Erstellen','Create Recipe'),
@@ -235,12 +236,7 @@ insert  into `translation`(`translation_name`,`translation_german`,`translation_
 ('RECIPE_SKILL','Schwierigkeitsgrad','Schwierigkeitsgrad'),
 ('RECIPE_TIME','Geschätzte Zeit','Estimated Time'),
 ('RECIPE_TITLE','Titel','Title'),
-('RECIPE_TITLE_5','',''),
-('RECIPE_TITLE_BIER','Bier','Bier'),
-('RECIPE_TITLE_Bockwurst mit Brötchen','',''),
-('RECIPE_TITLE_BOCKWURST UND KARTOFFELSALAT','Bockwurst und Kartoffelsalat','Bockwurst und Kartoffelsalat'),
 ('RECIPE_TITLE_CHILICONCARNE','Chili Con Carne','Chili Con Carne'),
-('RECIPE_TITLE_IT NOVUM CHOCOLATE CAKE','IT Novum Chocolate Cake','IT Novum Chocolate Cake'),
 ('RECIPE_TITLE_SALZSUPPE!','Salzsuppe!','Salzsuppe!'),
 ('REMOVE_INGREDIENT','Zutat entfernen','Remove Ingredient'),
 ('SEARCH','Deine Suche nach \"{query}\" fand {count} Rezepte:','Your query for \"{query}\" found {count} recipes:'),
@@ -248,11 +244,13 @@ insert  into `translation`(`translation_name`,`translation_german`,`translation_
 ('UNIT_COUNT','Stück','pieces'),
 ('UNIT_GRAM','Gramm','gram'),
 ('UNIT_MILLILITER','ml','ml'),
-('VIEWS','Besucher','Views',
+('VIEWS','Besucher','Views'),
 ('LATEST', 'Neueste', 'Latest'),
 ('FASTEST', 'Schnellste', 'Fastest'),
 ('EASIEST', 'Einfachste', 'Easiest'),
-('NAME', 'Name', 'Name');
+('NAME', 'Name', 'Name'),
+('DATE_TIME_FORMAT', 'd.m.Y H:i:s', 'd.m..Y H:i:s'),
+('CREATED', 'Erstellt', 'Created');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
