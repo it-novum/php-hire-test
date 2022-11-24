@@ -59,7 +59,7 @@ final class CreatorContext extends Context
      */
     protected function viewCreate(): void
     {
-        if ((string)$this->request->get('F00') !== 'baz') {
+        if ($this->request->get('F00') !== 'baz') {
             return;
         }
         // Import from POST
