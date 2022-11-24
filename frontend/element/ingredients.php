@@ -14,7 +14,7 @@ echo <<<HTML
     <thead>
         <tr>
             <th>{$t->translate('INGREDIENT')}</th>
-            <th>{$t->translate('AMOUNT')}</th>
+            <th style="text-align: right">{$t->translate('AMOUNT')}</th>
         </tr>
     </thead>
     <tbody>
