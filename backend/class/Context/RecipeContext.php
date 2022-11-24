@@ -57,7 +57,20 @@ final class RecipeContext extends Context
      */
     protected function viewList(): void
     {
-        // Search
+        switch ($this->request->get(self::ORDER)) {
+            case 'LATEST':
+                $this->recipeModel->addOrder('recipe_created', 'DESC');
+                break;
+            case 'FASTEST':
+                $this->recipeModel->addOrder('recipe_time', 'ASC');
+                break;
+            case 'EASIEST':
+                $this->recipeModel->addOrder('recipe_skill', 'ASC');
+                break;
+            case 'NAME':
+            default:
+                $this->recipeModel->addOrder('translation_key', 'ASC');
+        }
         $rows    = $this->recipeModel->search();
         $recipes = [];
         foreach ($rows as $row) {
