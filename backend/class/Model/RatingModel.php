@@ -4,7 +4,7 @@ namespace noxkiwi\cookbook\Model;
 use noxkiwi\dataabstraction\Model;
 
 /**
- * I am the storage for Recipes.
+ * I am the storage for Ratings of a Recipe.
  *
  * @package      noxkiwi\cookbook\Model
  * @author       Jan Nox <jan@nox.kiwi>

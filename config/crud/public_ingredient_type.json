@@ -13,13 +13,6 @@
         },
         "icon": "EDIT",
         "target": "modal"
-      },
-      {
-        "link": {
-          "view": "delete"
-        },
-        "icon": "DELETE",
-        "target": "modal"
       }
     ],
     "top": [

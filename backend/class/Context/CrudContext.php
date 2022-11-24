@@ -4,8 +4,7 @@ namespace noxkiwi\cookbook\Context;
 use noxkiwi\crud\Context\CrudContext as BaseCrudContext;
 
 /**
- * I am the Context object that manages data transfer between Crud Frontend and Crud backend.
- * This overwriting is necessary to add the fitting Manipulator class.
+ * I am the Context that manages data transfer between Crud front-end and Crud back-end.
  *
  * @package      noxkiwi\cookbook\Context
  * @author       Jan Nox <jan@nox.kiwi>

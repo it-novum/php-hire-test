@@ -12,7 +12,6 @@ use noxkiwi\crud\Context\CrudfrontendContext as BaseCrudFrontendContext;
  * @copyright    2022 noxkiwi
  * @version      1.0.0
  * @link         https://nox.kiwi/
- *
  */
 final class CrudfrontendContext extends BaseCrudFrontendContext
 {

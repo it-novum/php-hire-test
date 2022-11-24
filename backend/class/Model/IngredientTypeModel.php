@@ -4,7 +4,9 @@ namespace noxkiwi\cookbook\Model;
 use noxkiwi\dataabstraction\Model;
 
 /**
- * I am the storage for Recipes.
+ * I am the storage for ingredient types.
+ *
+ * These are among others fruit, vegetables, herbs or spices.
  *
  * @package      noxkiwi\cookbook\Model
  * @author       Jan Nox <jan@nox.kiwi>
