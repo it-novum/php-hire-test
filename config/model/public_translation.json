@@ -1,0 +1,30 @@
+{
+  "fields": {
+    "translation_name": {
+      "name": "translation_name",
+      "display": "translation_name",
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "translation_german": {
+      "name": "translation_german",
+      "display": "translation_german",
+      "type": "text",
+      "required": true,
+      "unique": false
+    },
+    "translation_english": {
+      "name": "translation_english",
+      "display": "translation_english",
+      "type": "text",
+      "required": true,
+      "unique": false
+    }
+  },
+  "primary": [
+    "translation_name"
+  ],
+  "unique": [
+  ]
+}

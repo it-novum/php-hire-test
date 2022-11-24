@@ -1,0 +1,21 @@
+{
+  "timeZone": "UTC",
+  "defaultcontext": "recipe",
+  "defaulttemplate": "cookbook",
+  "context": {
+    "cookbook": {
+      "defaultview": "search",
+      "view": {
+        "search": {},
+        "view": {}
+      }
+    },
+    "crudfrontend": {
+      "defaultview": "list",
+      "view": {
+        "search": {},
+        "view": {}
+      }
+    }
+  }
+}

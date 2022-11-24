@@ -1,0 +1,57 @@
+{
+  "fields": {
+    "recipe_rating_id": {
+      "name": "recipe_rating_id",
+      "display": "ID",
+      "default": 0,
+      "min": 0,
+      "max": 4294967296,
+      "type": "number_natural"
+    },
+    "recipe_rating_created": {
+      "name": "recipe_rating_created",
+      "display": "CREATED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "recipe_rating_modified": {
+      "name": "recipe_rating_modified",
+      "display": "MODIFIED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "recipe_rating_flags": {
+      "name": "recipe_rating_flags",
+      "display": "FLAGS",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64
+    },
+    "recipe_id": {
+      "name": "recipe_id",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64
+    },
+    "recipe_rating_rating": {
+      "type": "number_natural",
+      "required": true,
+      "min": 0,
+      "max": 5
+    },
+    "recipe_rating_comment": {
+      "name": "recipe_rating_comment",
+      "type": "text",
+      "required": true
+    }
+  },
+  "primary": [
+    "recipe_rating_id"
+  ],
+  "unique": [
+  ]
+}

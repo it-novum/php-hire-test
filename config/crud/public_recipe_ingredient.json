@@ -1,0 +1,29 @@
+{
+  "fields": {
+    "show": [
+      "recipe_id",
+      "ingredient_id",
+      "recipe_ingredient_amount"
+    ]
+  },
+  "action": {
+    "element": [
+      {
+        "link": {
+          "view": "create"
+        },
+        "icon": "EDIT",
+        "target": "modal"
+      }
+    ],
+    "top": [
+      {
+        "link": {
+          "view": "create"
+        },
+        "icon": "PLUS",
+        "target": "modal"
+      }
+    ]
+  }
+}

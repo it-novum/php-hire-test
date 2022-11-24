@@ -1,0 +1,68 @@
+{
+  "fields": {
+    "recipe_id": {
+      "name": "recipe_id",
+      "display": "ID",
+      "default": 0,
+      "min": 0,
+      "max": 4294967296,
+      "type": "number_natural"
+    },
+    "recipe_created": {
+      "name": "recipe_created",
+      "display": "CREATED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "recipe_modified": {
+      "name": "recipe_modified",
+      "display": "MODIFIED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "recipe_flags": {
+      "name": "recipe_flags",
+      "display": "FLAGS",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64
+    },
+    "recipe_time": {
+      "name": "recipe_time",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64
+    },
+    "recipe_skill": {
+      "name": "recipe_skill",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64
+    },
+    "translation_key": {
+      "name": "translation_key",
+      "display": "translation_key",
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "description_key": {
+      "name": "description_key",
+      "display": "description_key",
+      "type": "text",
+      "required": true,
+      "unique": true
+    }
+  },
+  "primary": [
+    "recipe_id"
+  ],
+  "unique": [
+  ]
+}

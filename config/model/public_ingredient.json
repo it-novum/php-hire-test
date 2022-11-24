@@ -1,0 +1,66 @@
+{
+  "fields": {
+    "ingredient_id": {
+      "name": "ingredient_id",
+      "display": "ID",
+      "default": 0,
+      "min": 0,
+      "max": 4294967296,
+      "type": "number_natural"
+    },
+    "ingredient_created": {
+      "name": "ingredient_created",
+      "display": "CREATED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "ingredient_modified": {
+      "name": "ingredient_modified",
+      "display": "MODIFIED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "ingredient_flags": {
+      "name": "ingredient_flags",
+      "display": "FLAGS",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64
+    },
+    "ingredient_type_id": {
+      "name": "ingredient_type_id",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64,
+      "foreign": {
+        "model": "\\noxkiwi\\cookbook\\Model\\IngredientTypeModel",
+        "value": "ingredient_type_id",
+        "display": "{translation_name} ({ingredient_type_id})"
+      }
+    },
+    "translation_name": {
+      "type": "text",
+      "required": true,
+      "foreign": {
+        "model": "\\noxkiwi\\cookbook\\Model\\TranslationModel",
+        "value": "translation_name",
+        "display": "{translation_german}"
+      }
+    },
+    "ingredient_unit": {
+      "name": "ingredient_unit",
+      "type": "text",
+      "required": true,
+      "unique": true
+    }
+  },
+  "primary": [
+    "ingredient_id"
+  ],
+  "unique": [
+  ]
+}
