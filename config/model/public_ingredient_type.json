@@ -1,0 +1,45 @@
+{
+  "fields": {
+    "ingredient_type_id": {
+      "name": "ingredient_type_id",
+      "display": "ID",
+      "default": 0,
+      "min": 0,
+      "max": 4294967296,
+      "type": "number_natural"
+    },
+    "ingredient_type_created": {
+      "name": "ingredient_type_created",
+      "display": "CREATED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "ingredient_type_modified": {
+      "name": "ingredient_type_modified",
+      "display": "MODIFIED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "ingredient_type_flags": {
+      "name": "ingredient_type_flags",
+      "display": "FLAGS",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64
+    },
+    "translation_name": {
+      "name": "translation_name",
+      "display": "translation_name",
+      "type": "text",
+      "required": true,
+      "unique": true
+    }
+  },
+  "primary": [
+    "ingredient_type_id"
+  ],
+  "unique": [
+  ]
+}

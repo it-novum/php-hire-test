@@ -1,0 +1,53 @@
+{
+  "fields": {
+    "recipe_ingredient_id": {
+      "name": "recipe_ingredient_id",
+      "display": "ID",
+      "default": 0,
+      "min": 0,
+      "max": 4294967296,
+      "type": "number_natural"
+    },
+    "recipe_ingredient_created": {
+      "name": "recipe_ingredient_created",
+      "display": "CREATED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "recipe_ingredient_modified": {
+      "name": "recipe_ingredient_modified",
+      "display": "MODIFIED",
+      "type": "text_timestamp",
+      "default": "NOW"
+    },
+    "recipe_ingredient_flags": {
+      "name": "recipe_ingredient_flags",
+      "display": "FLAGS",
+      "type": "number_natural",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 64
+    },
+    "recipe_id": {
+      "name": "recipe_id",
+      "type": "number_natural",
+      "required": true
+    },
+    "ingredient_id": {
+      "name": "ingredient_id",
+      "type": "number_natural",
+      "required": true
+    },
+    "recipe_ingredient_amount": {
+      "name": "recipe_ingredient_amount",
+      "type": "number_natural",
+      "required": true
+    }
+  },
+  "primary": [
+    "recipe_ingredient_id"
+  ],
+  "unique": [
+  ]
+}
