@@ -92,19 +92,19 @@ final class CreatorContext extends Context
         */
 
         // I know this is all absolute and utter BS but instead of fixing the abstraction layer to work as intended, this needs to be enough for now.
-        $title                          = str_replace("'", '\'', htmlspecialchars((string)$this->request->get('name')));
+        $database                       = Database::getInstance();
+        $title                          = $database->escape((string)$this->request->get('name'));
         $titleTranslation               = new Query();
         $titleTranslation->string       = <<<MYSQL
-REPLACE INTO translation (`translation_name`, `translation_german`, `translation_english`) VALUES ('$recipe->translation_key', '$title', '$title');
+REPLACE INTO translation (`translation_name`, `translation_german`, `translation_english`) VALUES ('$recipe->translation_key', $title, $title);
 MYSQL;
-        $description                    = str_replace("'", '\'', htmlspecialchars((string)$this->request->get('description')));
+        $description                    = $database->escape((string)$this->request->get('description'));
         $descriptionTranslation         = new Query();
         $descriptionTranslation->string = <<<MYSQL
-REPLACE INTO translation (`translation_name`, `translation_german`, `translation_english`) VALUES ('$recipe->description_key', '$description', '$description');
+REPLACE INTO translation (`translation_name`, `translation_german`, `translation_english`) VALUES ('$recipe->description_key', $description, $description);
 MYSQL;
 
         // Just to clarify that again, I'd really prefer to NEVER use direct access on the ORM but...
-        $database = Database::getInstance();
         $database->write($titleTranslation);
         $database->write($descriptionTranslation);
         // BUILD RECIPE<->INGREDIENTS
