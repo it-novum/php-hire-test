@@ -93,12 +93,12 @@ final class CreatorContext extends Context
 
         // I know this is all absolute and utter BS but instead of fixing the abstraction layer to work as intended, this needs to be enough for now.
         $database                       = Database::getInstance();
-        $title                          = $database->escape((string)$this->request->get('name'));
+        $title                          = $database->quote((string)$this->request->get('name'));
         $titleTranslation               = new Query();
         $titleTranslation->string       = <<<MYSQL
 REPLACE INTO translation (`translation_name`, `translation_german`, `translation_english`) VALUES ('$recipe->translation_key', $title, $title);
 MYSQL;
-        $description                    = $database->escape((string)$this->request->get('description'));
+        $description                    = $database->quote((string)$this->request->get('description'));
         $descriptionTranslation         = new Query();
         $descriptionTranslation->string = <<<MYSQL
 REPLACE INTO translation (`translation_name`, `translation_german`, `translation_english`) VALUES ('$recipe->description_key', $description, $description);
