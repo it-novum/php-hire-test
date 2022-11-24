@@ -47,6 +47,7 @@ final class RecipeModel extends Model
         $recipeEntry               = self::expect($recipeId);
         $recipeObject              = new Recipe();
         $recipeObject->recipeId    = $recipeId;
+        $recipeObject->created     = new DateTime($recipeEntry->recipe_created);
         $recipeObject->name        = $recipeEntry->translation_key;
         $recipeObject->description = $recipeEntry->description_key;
         $recipeObject->multiplier  = $multiplier;
