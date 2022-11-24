@@ -29,7 +29,7 @@ final class CookbookTranslator extends Translator
     public function getKeys(): array
     {
         $query   = <<<MYSQL
-SELECT `translation`.`translation_key` FROM `translation`;
+SELECT `translation`.`translation_name` FROM `translation`;
 MYSQL;
         $results = [];
         try {
@@ -41,7 +41,7 @@ MYSQL;
         }
         $ret = [];
         foreach ($results as $result) {
-            $ret[] = $result['translation_key'];
+            $ret[] = $result['translation_name'];
         }
 
         return $ret;
