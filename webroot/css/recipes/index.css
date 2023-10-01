@@ -1,0 +1,11 @@
+.preview-overlay {
+    position: absolute;
+    display: none;
+    width: 500px;
+    height: 100px;
+    text-align: justify;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 10px 5px 5px gray;
+    padding: 5px;
+}
