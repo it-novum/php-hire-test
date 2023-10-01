@@ -49,18 +49,18 @@ return function (RouteBuilder $routes): void {
      */
     $routes->setRouteClass(DashedRoute::class);
 
+    $routes->scope('/recipes', function (RouteBuilder $routes) {
+        $routes->connect('/getDescription', ['controller' => 'Recipes', 'action' => 'getDescription']);
+    });
+
     $routes->scope('/', function (RouteBuilder $builder): void {
         /*
          * Here, we are connecting '/' (base path) to a controller called 'Pages',
          * its action called 'display', and we pass a param to select the view file
          * to use (in this case, templates/Pages/home.php)...
          */
-        $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
-
-        /*
-         * ...and connect the rest of 'Pages' controller's URLs.
-         */
-        $builder->connect('/pages/*', 'Pages::display');
+        $builder->connect('/', ['controller' => 'Recipes', 'action' => 'index', 'home']);
+        $builder->connect('/home', ['controller' => 'Recipes', 'action' => 'index']);
 
         /*
          * Connect catchall routes for all controllers.
